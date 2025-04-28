@@ -110,4 +110,4 @@ Fine-tuning with LoRA significantly improves explicit contradiction recognition 
 - Chenxi Wang
 - Muhra AlMahri
 - Ayesha AlHammadi
-- (MBZUAI, Group ID: G-07)
+(MBZUAI, Group ID: G-07)
