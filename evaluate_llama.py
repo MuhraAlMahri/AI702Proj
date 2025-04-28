@@ -2,9 +2,10 @@ import json
 from nltk.translate.bleu_score import sentence_bleu
 from collections import Counter
 
-# 📌 关键词列表
+
+    # 📌 关键词列表
 keywords = [
-    "contradictory", "contradiction", "conflict", "inconsistent", "inconsistency", "paradox",
+        "contradictory", "contradiction", "conflict", "inconsistent", "inconsistency", "paradox",
     "self-contradictory", "paradoxical", "mutually exclusive", "opposing", "discrepancy", 
     "incongruous", "disagreement", "logical fallacy", "circular reasoning", "doublethink",
     "oxymoron", "ambiguous", "contravening", "discordant", "irreconcilable", "duality",
@@ -29,6 +30,9 @@ for item in results:
 
     # 2️⃣ 计算关键词匹配
     found = any(keyword in pred for keyword in keywords)
+    print('found', found)
+    if 'contradiction' in pred:
+        found = False
     if found:
         keyword_counts["recognized"] += 1
     else:
